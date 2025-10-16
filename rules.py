@@ -43,4 +43,5 @@ phishing_keywords = [
     "authorize",
     "attachment",
     "secure",
+    "verify"
 ]

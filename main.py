@@ -11,8 +11,11 @@ for kw in phishing_keywords:
         matches.append(kw.lower())
     
     
-print('-' * 50, 'Suspicious Language Detected', '-' * 50)
-print(matches)
+if len(matches) > 0:
+    print('-' * 50, 'Suspicious Language Detected', '-' * 50)
+    print(matches)
+else:
+    print("No suspicious language found")
         
 
    
