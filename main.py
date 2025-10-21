@@ -1,5 +1,5 @@
 import re
-from rules import phishing_keywords
+from detection_rules import phishing_keywords
 
     
 def detect_suspicious_language(path, words):
