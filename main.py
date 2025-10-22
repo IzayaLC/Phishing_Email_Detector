@@ -1,7 +1,8 @@
 import re
+import report_layout
 from detection_rules import phishing_keywords
 
-    
+
 def detect_suspicious_language(path, words):
     with open(path, 'r') as f:
         text = f.read().lower()
@@ -38,6 +39,7 @@ def detect_sender_reply_mismatch(path):
 
 if __name__ == "__main__":
     path = 'sample.txt'
-    print('-' * 50, 'Email Report', '-' * 50)
+    report_layout.report_header(path)
     print(detect_suspicious_language(path, phishing_keywords))
     print(detect_sender_reply_mismatch(path))
+    report_layout.divider()
